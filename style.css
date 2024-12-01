@@ -3,21 +3,30 @@
 body {
     margin: 0;
     font-family: 'Fira Sans', sans-serif;
+    background: #0f0f0f; /* Solid background for the rest of the page */
     color: #fff;
-    background: #0f0f0f;
     overflow-x: hidden;
   }
+  
   
   
   /* Hero Section */
   .hero {
     height: 100vh;
-    background: linear-gradient(180deg, #ff4500, #5a0000);
+    background: 
+      linear-gradient(180deg, rgba(255, 69, 0, 0.6), rgba(139, 0, 0, 0.8)), /* Gradient overlay */
+      url('background-pattern.png') repeat; /* Seamless repeating pattern */
+    background-size: auto, 300px; /* Ensures pattern repeats properly */
+    background-position: center; /* Centers the pattern */
+    background-attachment: fixed; /* Static effect while scrolling */
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
   }
+  
+  
+  
   
   .hero h1 {
     font-family: 'Fira Sans', sans-serif;
@@ -35,8 +44,19 @@ body {
     margin: 10px 0 20px;
     font-weight: 400;
   }
+
+  .cta-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
   
   .cta-buttons .btn {
+    flex: 1 1 auto;
+    min-width: 120px;
+    max-width: 200px;
+    text-align: center;
     padding: 10px 20px;
     margin: 5px;
     text-decoration: none;
@@ -46,25 +66,36 @@ body {
     font-size: 1rem;
     transition: transform 0.3s ease, background 0.3s ease;
     font-weight: 600;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
   }
   
   .cta-buttons .btn:hover {
     transform: scale(1.1);
   }
   
+  /* Spotify */
   .cta-buttons .spotify {
-    background: #1db954;
-    border: none;
+    background-color: #1DB954;
   }
   
+  /* TikTok */
   .cta-buttons .tiktok {
-    background: #69c9d0;
-    border: none;
+    background: linear-gradient(45deg, #FF0050, #69C9D0);
+  }
+
+  .cta-buttons .tiktok:hover {
+    background: linear-gradient(45deg, #FF0050, #69C9D0); /* TikTok's signature gradient */
+    color: #fff;
   }
   
-  .cta-buttons .github {
-    background: #333;
-    border: none;
+  /* X (Twitter) */
+  .cta-buttons .x {
+    background-color: #000;
+  }
+  
+  /* Instagram */
+  .cta-buttons .instagram {
+    background: linear-gradient(45deg, #F58529, #DD2A7B, #8134AF); /* Instagram gradient */
   }
   
   /* About Section */
@@ -166,3 +197,15 @@ body {
     { background: linear-gradient(180deg, #ff6347, #ff4500); 
         } 
 }
+
+@media (max-width: 768px) {
+    .cta-buttons {
+      flex-direction: column; /* Stack buttons vertically */
+      align-items: center; /* Center the buttons */
+    }
+  
+    .cta-buttons .btn {
+      width: 80%; /* Buttons take up 80% of the screen width */
+    }
+  }
+  
