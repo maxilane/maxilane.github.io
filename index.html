@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Maxi Lane - Official</title>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -24,20 +25,47 @@
     <p>
       Welcome to the world of Maxi Lane. I’m an artist and game developer blending rhythm and creativity. Dive into my music, check out my upcoming game <strong>Pulse Runner</strong>, and join the journey.
     </p>
-    <iframe src="https://open.spotify.com/artist/6vcQX5erHvB1vPlShgmLzA" width="100%" height="80" frameborder="0" allow="encrypted-media"></iframe>
+    <iframe
+        src="https://open.spotify.com/embed/artist/6vcQX5erHvB1vPlShgmLzA"
+        width="100%"
+        height="80"
+        frameborder="0"
+        allowtransparency="true"
+        allow="encrypted-media">
+    </iframe>
   </div>
 
   <div class="portfolio">
     <h2>My Music</h2>
-        <div class="album">
-            <img src="A.jpg" alt="Madness in the Hourglass Album">
-            <p><strong>Madness in the Hourglass</strong></p>
-            <a href="https://open.spotify.com/album/1fLuNZof5QATKOhmcxF51T" target="_blank">Stream Now</a>
-        </div>
+    <div class="album">
+      <img src="A.jpg" alt="Madness in the Hourglass Album">
+      <p><strong>Madness in the Hourglass</strong></p>
+      <a href="https://open.spotify.com/album/1fLuNZof5QATKOhmcxF51T" target="_blank">Stream Now</a>
+    </div>
   </div>
 
   <div class="footer">
     <p>Designed by Maxi Lane | <a href="https://github.com/manga409" target="_blank">GitHub</a> | <a href="https://tiktok.com/@iam.maxilane" target="_blank">TikTok</a></p>
   </div>
+
+  <!-- JavaScript for Animations -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const fadeElements = document.querySelectorAll(".about, .portfolio");
+
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("fade-in");
+            }
+          });
+        },
+        { threshold: 0.2 } // Trigger when 20% of the element is visible
+      );
+
+      fadeElements.forEach((el) => observer.observe(el));
+    });
+  </script>
 </body>
 </html>

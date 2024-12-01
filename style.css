@@ -1,15 +1,18 @@
 /* General Styles */
+/* General Styles */
 body {
     margin: 0;
-    font-family: 'Arial', sans-serif;
+    font-family: 'Fira Sans', sans-serif;
     color: #fff;
     background: #0f0f0f;
+    overflow-x: hidden;
   }
+  
   
   /* Hero Section */
   .hero {
     height: 100vh;
-    background: linear-gradient(180deg, #ff4500, #8b0000);
+    background: linear-gradient(180deg, #ff4500, #5a0000);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -17,13 +20,20 @@ body {
   }
   
   .hero h1 {
+    font-family: 'Fira Sans', sans-serif;
     font-size: 4rem;
+    font-weight: 700;
     margin: 0;
+  }
+  
+  .about h2, .portfolio h2 {
+    font-family: 'Fira Sans', sans-serif;
   }
   
   .hero p {
     font-size: 1.5rem;
     margin: 10px 0 20px;
+    font-weight: 400;
   }
   
   .cta-buttons .btn {
@@ -34,12 +44,12 @@ body {
     border: 2px solid #fff;
     border-radius: 5px;
     font-size: 1rem;
-    transition: 0.3s;
+    transition: transform 0.3s ease, background 0.3s ease;
+    font-weight: 600;
   }
   
   .cta-buttons .btn:hover {
-    background: #fff;
-    color: #000;
+    transform: scale(1.1);
   }
   
   .cta-buttons .spotify {
@@ -62,10 +72,19 @@ body {
     padding: 50px;
     background: #1a1a1a;
     text-align: center;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s ease, transform 1s ease;
+  }
+  
+  .about.fade-in {
+    opacity: 1;
+    transform: translateY(0);
   }
   
   .about h2 {
     font-size: 2.5rem;
+    font-family: 'Fira Sans', sans-serif;
   }
   
   .about p {
@@ -78,10 +97,19 @@ body {
     padding: 50px;
     background: #111;
     text-align: center;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s ease, transform 1s ease;
+  }
+  
+  .portfolio.fade-in {
+    opacity: 1;
+    transform: translateY(0);
   }
   
   .portfolio h2 {
     font-size: 2.5rem;
+    font-family: 'Fira Sans', sans-serif;
   }
   
   .portfolio .album {
@@ -126,3 +154,15 @@ body {
     text-decoration: underline;
   }
   
+/* Animations */
+@keyframes textGlow {
+    from {
+      text-shadow: 0 0 10px #ff4500, 0 0 20px #ff4500, 0 0 30px #ff4500
+  ; } to { text-shadow: 0 0 20px #ff6347, 0 0 40px #ff6347, 0 0 60px #ff6347; } }
+  
+@keyframes backgroundGlow { from 
+    { background: linear-gradient(180deg, #ff4500, #8b0000); 
+        } to 
+    { background: linear-gradient(180deg, #ff6347, #ff4500); 
+        } 
+}
