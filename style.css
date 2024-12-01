@@ -1,0 +1,128 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    color: #fff;
+    background: #0f0f0f;
+  }
+  
+  /* Hero Section */
+  .hero {
+    height: 100vh;
+    background: linear-gradient(180deg, #ff4500, #8b0000);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .hero h1 {
+    font-size: 4rem;
+    margin: 0;
+  }
+  
+  .hero p {
+    font-size: 1.5rem;
+    margin: 10px 0 20px;
+  }
+  
+  .cta-buttons .btn {
+    padding: 10px 20px;
+    margin: 5px;
+    text-decoration: none;
+    color: #fff;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: 0.3s;
+  }
+  
+  .cta-buttons .btn:hover {
+    background: #fff;
+    color: #000;
+  }
+  
+  .cta-buttons .spotify {
+    background: #1db954;
+    border: none;
+  }
+  
+  .cta-buttons .tiktok {
+    background: #69c9d0;
+    border: none;
+  }
+  
+  .cta-buttons .github {
+    background: #333;
+    border: none;
+  }
+  
+  /* About Section */
+  .about {
+    padding: 50px;
+    background: #1a1a1a;
+    text-align: center;
+  }
+  
+  .about h2 {
+    font-size: 2.5rem;
+  }
+  
+  .about p {
+    font-size: 1.2rem;
+    margin: 20px 0;
+  }
+  
+  /* Portfolio Section */
+  .portfolio {
+    padding: 50px;
+    background: #111;
+    text-align: center;
+  }
+  
+  .portfolio h2 {
+    font-size: 2.5rem;
+  }
+  
+  .portfolio .album {
+    margin-top: 20px;
+  }
+  
+  .portfolio .album img {
+    max-width: 200px;
+    border-radius: 10px;
+  }
+  
+  .portfolio .album a {
+    display: block;
+    margin-top: 10px;
+    text-decoration: none;
+    color: #ffa500;
+    font-weight: bold;
+  }
+  
+  .portfolio .album a:hover {
+    color: #ff4500;
+  }
+  
+  /* Footer */
+  .footer {
+    text-align: center;
+    padding: 20px;
+    background: #222;
+  }
+  
+  .footer p {
+    margin: 0;
+    font-size: 1rem;
+  }
+  
+  .footer a {
+    color: #ffa500;
+    text-decoration: none;
+  }
+  
+  .footer a:hover {
+    text-decoration: underline;
+  }
+  
